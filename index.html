@@ -208,12 +208,26 @@
               training designed and delivered by industry experts. We bridge the gap between theory and the high-stakes
               reality of corporate digital defense.</p>
             <div class="space38"></div>
-            <div class="btn-area1" data-aos="fade-up" data-aos-duration="1200">
-              <a href="courses.html" class="vl-btn1">Explore Our Courses<i class="fa-solid fa-arrow-right"></i></a>
-              <a href="contact.html" class="h-btn1">Contact Us Now <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+           <div class="btn-area1" data-aos="fade-up" data-aos-duration="1200">
+    <a href="courses.html" class="vl-btn1">Explore Our Courses<i class="fa-solid fa-arrow-right"></i></a>
+    <a href="contact.html" class="h-btn1">Contact Us Now <i class="fa-solid fa-arrow-right"></i></a>
+
+    <a href="#" class="vl-btn1 mobile-only"  data-bs-toggle="modal"  data-bs-target="#quoteModal">    Get A Quote <i class="fa-solid fa-arrow-right" ></i></a>
+</div>
+
+    <style>.mobile-only {
+    display: none;
+}
+
+
+@media (max-width: 991px) {
+    .mobile-only {
+        display: inline-flex; /* matches the vl-btn1 display style */
+        margin-top: 20px;    
+    }
+}</style>
           </div>
-          <a href="#about" class="scroll-down">
+          <a href="#about" class="scroll-down d-none d-md-block">
             <span class="icons">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="44" viewBox="0 0 28 44" fill="none">
                 <path
@@ -359,18 +373,55 @@
                   </div>
                 </div>
 
-                <div class="col-xl-12 col-md-12 mb-3">
+                <div class="col-xl-12 col-md-12 mb-">
                   <div class="input-area">
                     <select name="subject" id="subject" class="country-area nice-select" required>
                       <option value="" data-display="Select Course">Select Course</option>
-                      <option value="dsoc">Diploma in Security Operations Center (DSOC)</option>
-                      <option value="dpen">Diploma in Penetration Testing (DPEN)</option>
-                      <option value="dcna">Diploma in Cyber Network Administration (DCNA)</option>
-                      <option value="dpam">Diploma in Privileged Access Management (DPAM)</option>
+                      <option value="dsoc">(DSOC) Diploma in Security Operations Center</option>
+                      <option value="dpen">(DPEN) Diploma in Penetration Testing</option>
+                      <option value="dcna">(DCNA) Diploma in Cyber Network Administration</option>
+                      <option value="dpam">(DPAM) Diploma in Privileged Access Management</option>
                     </select>
                   </div>
                 </div>
+<style>
+ @media (max-width: 768px) {
+  .nice-select {
+    font-size: 14px !important;
+    padding-right: 30px !important;
+  }
+}
 
+.nice-select .list {
+  max-height: 100px !important; 
+  overflow-y: auto !important;
+}
+
+/* Make long options wrap instead of stretching */
+.nice-select .option {
+  white-space: normal !important;
+  line-height: 24px !important; 
+  padding-top: 8px !important;
+  padding-bottom: 18px !important;
+}
+
+/* Fix selected text inside nice-select */
+.nice-select .current {
+  white-space: normal !important;   /* Allow wrapping */
+  line-height: 20px !important;     /* Reduce height */
+  display: block !important;
+  padding-right: 20px !important;
+}
+
+/* Reduce the container height so it fits */
+.nice-select {
+  min-height: 48px !important;
+  height: auto !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+</style>
                 <div class="col-xl-12 col-md-12">
                   <div class="input-area">
                     <button id="submitBtn" type="submit" class="vl-btn1">
@@ -388,6 +439,8 @@
     </div>
   </div>
 
+
+  
   <!--===== BOOKING =======-->
 
 
@@ -636,13 +689,11 @@
 
               <a href="course-dpen-single.html" class="title" style="font-size:16px; line-height:1.2;">
                 DPEN (Diploma in Penetration Testing)
-
               </a>
-
               <div class="space8"></div>
 
               <p style="font-size:13px; margin-bottom:4px;">
-                Provides skills to identify and exploit vulnerabilities in systems, networks, and applications.
+               Provides in-depth skills to identify, exploit, and secure vulnerabilities across networks, web applications, and operating systems.
               </p>
               <p style="font-size:13px; margin-bottom:0;">
                 CEH Certification (Certified Ethical Hacker)
@@ -655,7 +706,7 @@
                   Learn More <i class="fa-solid fa-arrow-right"></i>
                 </a>
                 <a href="https://drive.google.com/uc?export=download&id=1FK9olzzxkpI-okyVdc2hPOLcLijVYJ3b
-" class="btn btn-sm btn-primary" download
+"class="btn btn-sm btn-primary" download
                   style="font-size:13px;">
                   <i class="fa-solid fa-download"></i> Download Syllabus
                 </a>
@@ -685,8 +736,7 @@
               <div class="space8"></div>
 
               <p style="font-size:13px; margin-bottom:4px;">
-                Equips learners with networking fundamentals, routing, switching, and network security skills.
-              </p>
+                The course blends theory with hands-on lab sessions, enabling students to work with routers, switches, firewalls.
               <p style="font-size:13px; margin-bottom:0;">
                 CCNA (Cisco Certified Network Associate)
               </p>
@@ -1655,7 +1705,14 @@
       });
     });
   </script>
-
+<style>
+  @media (max-width: 768px) {
+ 
+  .cta-bg-area {
+    overflow: hidden; 
+  }
+}
+</style>
 
 
   <script>
