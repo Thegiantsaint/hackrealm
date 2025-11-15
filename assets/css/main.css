@@ -11442,6 +11442,111 @@ background: linear-gradient(135deg, #ED358F, #383293);
     margin-bottom: 30px;
   }
 }
+
+/* Footer centering adjustments for mobile */
+@media (max-width: 991px) {
+  .mobile-footer-links {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .mobile-footer-links .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .footer-widget-area {
+    text-align: center !important;
+    margin: 0 auto;
+  }
+  
+  .footer-widget-area ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  
+  .footer-widget-area ul li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .footer-widget-area h3 {
+    text-align: center !important;
+    margin: 0 auto 15px;
+  }
+  
+  .footer-logo-area {
+    text-align: center !important;
+  }
+  
+  .footer-logo-area p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  
+  .social-links {
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .social-links li {
+    margin: 0 8px;
+  }
+  
+  .copyright-area {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .copyright-area ul {
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  
+  .copyright-area ul li {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-footer-links .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .footer-logo-area p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .mobile-footer-links .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .mobile-footer-links {
+    max-width: 100%;
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .choose1 .choose-heading {
     padding: 0;
