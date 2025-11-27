@@ -815,6 +815,7 @@ background: linear-gradient(135deg, #ED358F, #383293);
 /*============= COMMON CSS AREA ENDS===============*/
 .sp1 {
   padding: 100px 0 100px;
+  
 }
 @media (max-width: 767px) {
   .sp1 {
