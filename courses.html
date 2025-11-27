@@ -74,6 +74,9 @@
                     </ul>
                   </li>
 
+                   <li><a href="internship.html">Internship <span><i class="fa-solid  d-xl-inline d-none"></i></span></a>
+                  </li>
+
                   <li><a href="blog.html">Blogs <span><i class="fa-solid  d-xl-inline d-none"></i></span></a>
 
                   </li>
@@ -203,7 +206,7 @@
   <!--===== HERO AREA ENDS =======-->
 
   <!--===== SERVICE AREA STARTS =======-->
-  <div class="service1-inenr-widget sp1">
+  <div class="service1-inenr-widget sp1"  >
     <div class="container">
       <div class="row">
 
@@ -330,9 +333,27 @@
     </div>
   </div>
   <!--===== SERVICE AREA ENDS =======-->
-
+<style>
+      :root {
+      /* Brand Colors */
+      --brand-magenta: #ed358f;
+      --brand-blue: #383293;
+      --brand-purple: #300038;
+      --deep-void: #05020a;
+      
+      /* Utilities */
+      --white: #ffffff;
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      
+      /* Typography */
+      --font-heading: 'Archivo', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+  
+</style>
   <!--===== CONTACT AREA STARTS =======-->
-  <div class="contact2 sp1">
+  <div class="contact2 sp1" >
     <div class="container">
       <div class="row">
         <div class="col-xl-8 m-auto">
@@ -505,8 +526,8 @@
         <div class="copyright-area">
           <a href="#">© 2025 Hackrealm. All Rights Reserved.</a>
           <ul>
-            <li><a href="#">Privacy Policy</a><span> | </span></li>
-            <li><a href="#">Terms Of Condition</a></li>
+            <li><a href="privacy.html">Privacy Policy</a><span> | </span></li>
+            <li><a href="terms-condition.html">Terms Of Condition</a></li>
           </ul>
         </div>
       </div>
@@ -672,7 +693,7 @@
       $btn.prop("disabled", true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
 
       $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbz7BDKkr1YlqlROgUFsJ2dzwiseNd-sEgMHaE7VsvryTtRB-5rvfg1PE1EnDqERDLEKFQ/exec",
+        url: "https://script.google.com/macros/s/AKfycbxuR1qxXf64svFvSPSt5uzUTWk3E8eJK0KwDuc5ERndtDmixX6gNEbxM4uOJyMbAThYEg/exec",
         data: $("#courseForm").serialize(),
         method: "POST",
         success: function (response) {
@@ -696,7 +717,7 @@
     $btn.prop("disabled", true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
 
     $.ajax({
-      url: "https://script.google.com/macros/s/AKfycbz6CPylnFq4JmwxpC7zzS6hVYux3kihFO5CZDOg_IZS1ondIPh2rtRZYhoJ8HtuZ3rSmg/exec",
+      url: "https://script.google.com/macros/s/AKfycbzAdDIFugipCmFImbXQUldoYBSlXboEa9XV4i95fmqd7tOCPCN_p3MPfDs29Si44VUw-A/exec",
       data: $("#messageForm").serialize(),
       method: "POST",
       success: function (response) {

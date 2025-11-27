@@ -78,6 +78,8 @@
                     </ul>
                   </li>
 
+                  
+
                    <li><a href="internship.html">Internship <span><i class="fa-solid  d-xl-inline d-none"></i></span></a>
                   </li>
 
@@ -256,7 +258,7 @@
 
 
   <!--===== BOOKING =======-->
- <div class="contact-widget-sec sp1">
+ <div class="contact-widget-sec sp1" > 
     <div class="container">
       <div class="row">
 
@@ -585,32 +587,32 @@
           <div class="contact-widget-area-inner heading1">
             <p>Unlock practical knowledge, expert insights, and hands-on experience. Register now to begin your path to
               success.</p>
-            <form id="courseForm" class="contact-boxarea" action="">
+<form id="courseFormModal" class="contact-boxarea">
               <div class="row">
                 <div class="col-xl-6 col-md-6 mb-3">
                   <div class="input-area">
-                    <input type="text" name="full_name" id="full_name" placeholder="Full Name" required>
+                    <input type="text" name="full_name" id="full_modal_name" placeholder="Full Name" required>
                   </div>
                 </div>
                 <div class="col-xl-6 col-md-6 mb-3">
                   <div class="input-area">
-                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="email" name="email" id="modal_email" placeholder="Email" required>
                   </div>
                 </div>
                 <div class="col-xl-12 col-md-12 mb-3">
                   <div class="input-area">
-                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                    <input type="tel" name="phone" id="modal_phone" placeholder="Phone Number" required>
                   </div>
                 </div>
                 <div class="col-xl-12 col-md-12 mb-3">
                   <div class="input-area">
-                    <input type="text" name="qualification" id="qualification" placeholder="Your Qualification">
+                    <input type="text" name="qualification" id="modal_qualification" placeholder="Your Qualification">
                   </div>
                 </div>
 
                 <div class="col-xl-12 col-md-12 mb-3">
                   <div class="input-area">
-                    <select name="subject" id="subject" class="country-area nice-select" required>
+                    <select name="subject" id="modal_subject" class="country-area nice-select" required>
                       <option value="" data-display="Select Subject">Select Subject</option>
                       <option value="dsoc">Diploma in Security Operations Center (DSOC)</option>
                       <option value="dpen">Diploma in Penetration Testing (DPEN)</option>
@@ -1660,8 +1662,8 @@
         <div class="copyright-area">
           <a href="#">© 2025 Hackrealm. All Rights Reserved.</a>
           <ul>
-            <li><a href="#">Privacy Policy</a><span> | </span></li>
-            <li><a href="#">Terms Of Condition</a></li>
+            <li><a href="privacy.html">Privacy Policy</a><span> | </span></li>
+            <li><a href="terms-condition.html">Terms Of Condition</a></li>
           </ul>
         </div>
       </div>
@@ -1780,7 +1782,7 @@
       $btn.prop("disabled", true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
 
       $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbz7BDKkr1YlqlROgUFsJ2dzwiseNd-sEgMHaE7VsvryTtRB-5rvfg1PE1EnDqERDLEKFQ/exec",
+        url: "https://script.google.com/macros/s/AKfycbxuR1qxXf64svFvSPSt5uzUTWk3E8eJK0KwDuc5ERndtDmixX6gNEbxM4uOJyMbAThYEg/exec",
         data: $("#courseForm").serialize(),
         method: "POST",
         success: function (response) {
@@ -1797,29 +1799,81 @@
   </script>
 
 
-  <script>
+
+<script>
+$("#courseFormModal").submit(function (e) {
+  e.preventDefault();
+
+  const $btn = $("#courseFormModal .vl-btn1");
+
+  // Disable button + show loader
+  $btn.prop("disabled", true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
+
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbxuR1qxXf64svFvSPSt5uzUTWk3E8eJK0KwDuc5ERndtDmixX6gNEbxM4uOJyMbAThYEg/exec",
+    data: $("#courseFormModal").serialize(),
+    method: "POST",
+
+    success: function () {
+      alert("Form submitted successfully!");
+
+      // Reset form
+      $("#courseFormModal")[0].reset();
+
+      // Close modal
+      $("#quoteModal").modal("hide");
+
+      // Refresh page after closing modal
+      setTimeout(() => {
+        window.location.reload();
+      }, 400); // small delay so modal hides smoothly
+
+      // Restore button (not necessary but good safety)
+      $btn.prop("disabled", false).html('Send Now <i class="fa-solid fa-arrow-right"></i>');
+    },
+
+    error: function () {
+      alert("Something went wrong. Please try again.");
+      $btn.prop("disabled", false).html('Send Now <i class="fa-solid fa-arrow-right"></i>');
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+ <script>
     $("#messageForm").submit(function (e) {
       e.preventDefault();
 
+      // Get the submit button
       const $btn = $("#msgSubmitBtn");
+
+      // Disable button + show loading text
       $btn.prop("disabled", true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
 
       $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbz6CPylnFq4JmwxpC7zzS6hVYux3kihFO5CZDOg_IZS1ondIPh2rtRZYhoJ8HtuZ3rSmg/exec",
+        url: "https://script.google.com/macros/s/AKfycbzAdDIFugipCmFImbXQUldoYBSlXboEa9XV4i95fmqd7tOCPCN_p3MPfDs29Si44VUw-A/exec",
         data: $("#messageForm").serialize(),
         method: "POST",
         success: function (response) {
-          alert("Message sent successfully!");
-          $("#messageForm")[0].reset();
-          $btn.prop("disabled", false).html('Send Now <i class="fa-solid fa-arrow-right"></i>');
+          alert("Form submitted successfully");
+          window.location.reload();
         },
         error: function (err) {
           alert("Something went wrong. Please try again.");
+          // Re-enable button on failure
           $btn.prop("disabled", false).html('Send Now <i class="fa-solid fa-arrow-right"></i>');
         }
       });
     });
   </script>
+
+
+
 <style>
   @media (max-width: 768px) {
  

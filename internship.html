@@ -30,6 +30,206 @@
 
   <style>
     /* =========================================
+   MOBILE RESPONSIVENESS FIXES (<= 768px)
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* Body */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Hero Section */
+  .cyber-hero {
+    height: auto;
+    padding: 120px 20px 80px;
+    text-align: center;
+    background-position: center;
+  }
+
+  .hero-title {
+    font-size: 2.4rem !important;
+    line-height: 1.2;
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    padding: 8px 18px;
+  }
+
+  /* Glass Card */
+  .glass-card-futuristic {
+    padding: 40px 25px;
+    text-align: center;
+  }
+
+  .partner-logo {
+    max-width: 180px;
+  }
+
+  /* Flex Section Cards */
+  .flex-section {
+    padding: 60px 0;
+  }
+
+  .flex-card {
+    padding: 30px 20px;
+    margin-bottom: 20px;
+  }
+
+  .flex-title {
+    font-size: 20px;
+  }
+
+  .flex-desc {
+    font-size: 14px;
+  }
+
+  /* HEX HUB */
+  .hex-container {
+    height: auto !important;
+    padding: 20px 0;
+  }
+
+  .center-hex {
+    width: 180px;
+    height: 180px;
+  }
+
+  .center-icon {
+    font-size: 40px;
+  }
+
+  .hex-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Modules */
+  .module-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .module-box {
+    padding: 20px;
+    gap: 15px;
+    flex-direction: row;
+  }
+
+  .mod-num {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .mod-content h4 {
+    font-size: 18px;
+  }
+
+  /* Roadmap */
+  .roadmap-section-adv {
+    padding: 60px 0;
+  }
+
+  .rm-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .rm-title {
+    font-size: 18px !important;
+  }
+
+  .rm-step {
+    font-size: 12px;
+  }
+
+  .rm-desc {
+    font-size: 14px;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Certificate */
+  .cert-img-wrapper img {
+    max-width: 100%;
+  }
+
+  .cert-showcase {
+    padding: 10px;
+  }
+
+  /* CTA */
+  .cta-bg-area {
+    padding: 40px 20px !important;
+    text-align: center;
+  }
+
+  .cta-heading h2 {
+    font-size: 24px;
+  }
+
+  .cta-heading p {
+    font-size: 15px;
+  }
+
+  /* Footer */
+  .footer-logo-area img {
+    width: 140px;
+  }
+
+  .footer-widget-area ul {
+    font-size: 15px;
+  }
+
+  /* General mobile spacing */
+  h2, h3, h4 {
+    word-break: break-word;
+  }
+
+  .sp1 {
+    padding: 60px 0 !important;
+  }
+}
+
+/* =========================================
+   RESPONSIVE FOR SMALL DEVICES (<= 480px)
+   ========================================= */
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .glass-card-futuristic {
+    padding: 30px 20px;
+  }
+
+  .flex-card {
+    padding: 25px 15px;
+  }
+
+  .module-box {
+    padding: 16px;
+  }
+
+  .rm-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .center-hex {
+    width: 140px;
+    height: 140px;
+  }
+
+  .cta-bg-area {
+    padding: 30px 15px !important;
+  }
+}
+
+    /* =========================================
        CORE THEME: HACKREALM BRAND IDENTITY 2025
        ========================================= */
     :root {
@@ -59,7 +259,7 @@
     }
 
     /* SCROLLBAR */
-    ::-webkit-scrollbar { width: 8px; }
+    /* ::-webkit-scrollbar { width: 8px; } */
     ::-webkit-scrollbar-track { background: var(--brand-purple); }
     ::-webkit-scrollbar-thumb { background: var(--brand-magenta); border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--brand-blue); }
@@ -716,26 +916,7 @@
         box-shadow: 0 0 15px rgba(237, 53, 143, 0.2);
     }
 
-    .vl-btn1 {
-      background: var(--brand-magenta);
-      color: var(--white);
-      padding: 16px 42px;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-decoration: none;
-      border-radius: 50px;
-      display: inline-block;
-      border: none;
-      box-shadow: 0 4px 15px rgba(237, 53, 143, 0.3);
-      transition: 0.3s;
-    }
-    .vl-btn1:hover {
-      background: var(--brand-blue);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(56, 50, 147, 0.4);
-    }
+
   </style>
 </head>
 
@@ -777,9 +958,13 @@
               <nav class="vl-mobile-menu-active">
                 <ul>
                   <li class="">
-                    <a href="index.html">Home <span><i class="fa-solid d-xl-inline d-none"></i></span></a>
+                    <a href="index.html">Home<span><i class="fa-solid  d-xl-inline d-none"></i></span></a>
                   </li>
-                  <li><a href="courses.html">Courses <span><i class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
+
+
+
+                  <li><a href="courses.html">Courses <span><i
+                          class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
                     <ul class="sub-menu">
                       <li><a href="course-dcna-single.html">DCNA</a></li>
                       <li><a href="course-dpam-single.html">DPAM</a></li>
@@ -787,16 +972,27 @@
                       <li><a href="course-dsoc-single.html">DSOC</a></li>
                     </ul>
                   </li>
-                  <!-- ADDED INTERNSHIP LINK HERE -->
-                  <li><a href="internship.html">Internship <span><i class="fa-solid d-xl-inline d-none"></i></span></a></li>
-                  <li><a href="blog.html">Blogs <span><i class="fa-solid d-xl-inline d-none"></i></span></a></li>
+
+                  
+
+                   <li><a href="internship.html">Internship <span><i class="fa-solid  d-xl-inline d-none"></i></span></a>
+                  </li>
+
+                  <li><a href="blog.html">Blogs <span><i class="fa-solid  d-xl-inline d-none"></i></span></a>
+                  </li>
+
+
+
+
                   <li class="">
-                    <a href="about.html">About Us<span><i class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
+                    <a href="about.html">About Us<span><i
+                          class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
                     <ul class="sub-menu">
                       <li><a href="team.html">Our Team</a></li>
                       <li><a href="testimonial.html">Testimonials</a></li>
                       <li><a href="contact.html">Contact Us</a></li>
                       <li><a href="faq.html">FAQ's</a></li>
+                              <!-- <li><a href="404.html">404</a></li> -->
                     </ul>
                   </li>
                 </ul>
@@ -807,12 +1003,17 @@
             <div class="vl-hero-btn d-none d-xl-block text-end">
               <div class="sidebar_btn-area">
                 <div class="search-icon header__search header-search-btn">
-                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                      <path d="M25 25L17 17M1 10.3333C1 11.559 1.24141 12.7727 1.71046 13.905C2.1795 15.0374 2.86699 16.0663 3.73367 16.933C4.60035 17.7997 5.62925 18.4872 6.76162 18.9562C7.89399 19.4253 9.10766 19.6667 10.3333 19.6667C11.559 19.6667 12.7727 19.4253 13.905 18.9562C15.0374 18.4872 16.0663 17.7997 16.933 16.933C17.7997 16.0663 18.4872 15.0374 18.9562 13.905C19.4253 12.7727 19.6667 11.559 19.6667 10.3333C19.6667 9.10766 19.4253 7.89399 18.9562 6.76162C18.4872 5.62925 17.7997 4.60035 16.933 3.73367C16.0663 2.86699 15.0374 2.1795 13.905 1.71046C12.7727 1.24141 11.559 1 10.3333 1C9.10766 1 7.89399 1.24141 6.76162 1.71046C5.62925 2.1795 4.60035 2.86699 3.73367 3.73367C2.86699 4.60035 2.1795 5.62925 1.71046 6.76162C1.24141 7.89399 1 9.10766 1 10.3333Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                      fill="none">
+                      <path
+                        d="M25 25L17 17M1 10.3333C1 11.559 1.24141 12.7727 1.71046 13.905C2.1795 15.0374 2.86699 16.0663 3.73367 16.933C4.60035 17.7997 5.62925 18.4872 6.76162 18.9562C7.89399 19.4253 9.10766 19.6667 10.3333 19.6667C11.559 19.6667 12.7727 19.4253 13.905 18.9562C15.0374 18.4872 16.0663 17.7997 16.933 16.933C17.7997 16.0663 18.4872 15.0374 18.9562 13.905C19.4253 12.7727 19.6667 11.559 19.6667 10.3333C19.6667 9.10766 19.4253 7.89399 18.9562 6.76162C18.4872 5.62925 17.7997 4.60035 16.933 3.73367C16.0663 2.86699 15.0374 2.1795 13.905 1.71046C12.7727 1.24141 11.559 1 10.3333 1C9.10766 1 7.89399 1.24141 6.76162 1.71046C5.62925 2.1795 4.60035 2.86699 3.73367 3.73367C2.86699 4.60035 2.1795 5.62925 1.71046 6.76162C1.24141 7.89399 1 9.10766 1 10.3333Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg></a>
                 </div>
-                <button class="hamburger_menu"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path d="M3.33301 8H24.6663M3.33301 16H24.6663M3.33301 24H12.6663" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                <button class="hamburger_menu"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32" fill="none">
+                    <path d="M3.33301 8H24.6663M3.33301 16H24.6663M3.33301 24H12.6663" stroke="white" stroke-width="2.6"
+                      stroke-linecap="round" stroke-linejoin="round" />
                   </svg></button>
                 <div class="btn_area1">
                   <a href="#" class="vl-btn1" data-bs-toggle="modal" data-bs-target="#quoteModal">
@@ -882,7 +1083,7 @@
             Go beyond traditional learning. Build the next generation of defense strategies with our dynamic ecosystem of innovation and intelligence.
           </p>
           <div style="margin-top: 40px;">
-            <a href="#apply" class="vl-btn1">Initiate Application <i class="fa-solid fa-angle-right"></i></a>
+            <a href="" class="vl-btn1"  data-bs-toggle="modal" data-bs-target="#quoteModal">Initiate Application <i class="fa-solid fa-angle-right"></i></a>
           </div>
         </div>
       </div>
@@ -1164,9 +1365,9 @@
         <div class="rm-node" data-aos="zoom-in" data-aos-delay="800">
           <div class="rm-circle">
             <span class="rm-step">Phase 05</span>
-            <span class="rm-title" style="font-size: 18px;">Certification</span>
+            <span class="rm-title" style="font-size: 18px;">Capstone Project</span>
           </div>
-          <p class="rm-desc">Capstone Report & Verified Credentials</p>
+          <p class="rm-desc">Final Project & Portfolio Development</p>
         </div>
 
       </div>
@@ -1178,12 +1379,12 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right">
-           <h5 class="text-magenta" style="text-transform: uppercase; font-weight: 700;">Certification</h5>
-           <h2 style="font-family: var(--font-heading); font-size: 42px; font-weight: 800; margin-bottom: 30px; color: var(--white);">Verified Credentials</h2>
+           <h5 class="text-magenta" style="text-transform: uppercase; font-weight: 700;">Career Development</h5>
+           <h2 style="font-family: var(--font-heading); font-size: 42px; font-weight: 800; margin-bottom: 30px; color: var(--white);">Real-World Experience</h2>
            <p style="color: #ccc; font-size: 18px; line-height: 1.7; margin-bottom: 30px;">
-             Earn a certificate that carries weight in the industry. Co-branded with Warnetics Pvt Ltd, proving you have tackled real-world challenges.
+             Gain hands-on experience with real-world cyber security challenges. Work alongside industry professionals and build a portfolio that showcases your practical skills to future employers.
            </p>
-           <a href="#apply" class="vl-btn1">Get Certified</a>
+           <a href="#apply" class="vl-btn1">Start Your Journey</a>
         </div>
 
         <div class="col-lg-6 text-center" data-aos="zoom-in-left">
@@ -1201,47 +1402,69 @@
   <div class="space100 d-lg-block d-none"></div>
   <div class="space100 d-lg-none d-block"></div>
   <!--===== CTA AREA STARTS =======-->
-  <div class="cta1-aection-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="cta-bg-area"
-            style="background-color: #000; padding: 60px 40px; border-radius: 12px; color: #fff;">
-            <img src="assets/img/elements/elements4.png" alt="" class="elements4">
-            <div class="row align-items-center">
-              <div class="col-xl-6">
-                <div class="cta-heading">
-                  <h2 data-aos="zoom-in" data-aos-duration="800">Learn Real-World Cyber Security with HackRealm</h2>
-                  <div class="space16"></div>
-                  <p data-aos="zoom-in" data-aos-duration="900">
-                    At <strong>HackRealm</strong>, we don’t just teach theory — we train you to think like a hacker and
-                    defend like a professional.
-                    Gain hands-on experience with real-world cyber attacks, network defense, and ethical hacking tools
-                    used by experts in the field.
-                  </p>
-                  <div class="space32"></div>
-                  <div class="form-area" data-aos="zoom-in" data-aos-duration="1100">
-                    <form>
-                      <input type="text" placeholder="Your Email Address">
-                      <button class="vl-btn1" type="submit">Get Started <i class="fa-solid fa-arrow-right"></i></button>
-                    </form>
-                  </div>
+<div class="cta1-aection-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="cta-bg-area"
+          style="background-color: #000; padding: 60px 40px; border-radius: 12px; color: #fff;">
+
+          <div class="row justify-content-center text-center">
+            <div class="col-xl-8 col-lg-10">
+              <div class="cta-heading">
+
+                <h2 data-aos="zoom-in" data-aos-duration="800">
+                  Learn Real-World Cyber Security with HackRealm
+                </h2>
+
+                <div class="space16"></div>
+
+                <p data-aos="zoom-in" data-aos-duration="900">
+                  At <strong>HackRealm</strong>, we don’t just teach theory — we train you to think like a hacker and
+                  defend like a professional.
+                  Gain hands-on experience with real-world cyber attacks, network defense, and ethical hacking tools
+                  used by experts in the field.
+                </p>
+
+                <div class="space32"></div>
+
+                <div class="form-area" data-aos="zoom-in" data-aos-duration="1100">
+                  <form class="cta-form-centered">
+                    <input type="text" placeholder="Your Email Address">
+                    <button class="vl-btn1" type="submit">
+                      Get Started <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </form>
                 </div>
 
-              </div>
-              <div class="col-xl-1"></div>
-              <div class="col-xl-5" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="cta-images-area text-end">
-
-                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </div>
+</div>
 
+<style>
+  .cta-heading {
+  text-align: center;
+}
+
+.cta-form-centered {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cta-form-centered input {
+  width: 280px;
+  max-width: 100%;
+}
+
+</style>
   <!--===== CTA AREA ENDS =======-->
 
   <!--===== FOOTER AREA STARTS =======-->
@@ -1328,8 +1551,8 @@
         <div class="copyright-area">
           <a href="#">© 2025 Hackrealm. All Rights Reserved.</a>
           <ul>
-            <li><a href="#">Privacy Policy</a><span> | </span></li>
-            <li><a href="#">Terms Of Condition</a></li>
+            <li><a href="privacy.html">Privacy Policy</a><span> | </span></li>
+            <li><a href="terms-condition.html">Terms Of Condition</a></li>
           </ul>
         </div>
       </div>
@@ -1389,61 +1612,144 @@
   <!--===== SIDEBAR ENDS =======-->
 
   <!-- Modal -->
-  <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content p-4">
-        <div class="modal-header">
-          <h5 class="modal-title" id="quoteModalLabel">Join Our Courses Today</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="contact-widget-area-inner heading1">
-            <p>Unlock practical knowledge, expert insights, and hands-on experience. Register now to begin your path to success.</p>
-            <form id="courseForm" class="contact-boxarea" action="">
-              <div class="row">
-                <div class="col-xl-6 col-md-6 mb-3">
-                  <div class="input-area">
-                    <input type="text" name="full_name" id="full_name" placeholder="Full Name" required>
-                  </div>
-                </div>
-                <div class="col-xl-6 col-md-6 mb-3">
-                  <div class="input-area">
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                  </div>
-                </div>
-                <div class="col-xl-12 col-md-12 mb-3">
-                  <div class="input-area">
-                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
-                  </div>
-                </div>
-                <div class="col-xl-12 col-md-12 mb-3">
-                  <div class="input-area">
-                    <input type="text" name="qualification" id="qualification" placeholder="Your Qualification">
-                  </div>
-                </div>
-                <div class="col-xl-12 col-md-12 mb-3">
-                  <div class="input-area">
-                    <select name="subject" id="subject" class="country-area nice-select" required>
-                      <option value="" data-display="Select Subject">Select Subject</option>
-                      <option value="dsoc">Diploma in Security Operations Center (DSOC)</option>
-                      <option value="dpen">Diploma in Penetration Testing (DPEN)</option>
-                      <option value="dcna" selected>Diploma in Cyber Network Administration (DCNA)</option>
-                      <option value="dpam">Diploma in Privileged Access Management (DPAM)</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-xl-12 col-md-12">
-                  <div class="input-area">
-                    <button type="submit" value="Submit" class="vl-btn1">Send Now <i class="fa-solid fa-arrow-right"></i></button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-4">
+
+      <!-- Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="quoteModalLabel" style="color: #000;">
+          Hackrealm – Cybersecurity Internship Registration 2025
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <p style="font-size: 15px; color:#1a0020;">
+          Step into the world of cybersecurity with Hackrealm Academy.<br><br>
+          This internship is designed to give you hands-on, practical exposure to Security Operations, Ethical Hacking, and Networking.<br><br>
+          
+        </p>
+
+        <form id="courseForm">
+
+          <div class="row">
+
+            <!-- Full Name -->
+            <div class="col-md-6 mb-3">
+              <label class="form-label fw-bold" style="color: rgba(0, 0, 0, 0.703);">Full Name <span style="color:red">*</span></label>
+              <input type="text" class="form-control" name="full_name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6 mb-3" >
+              <label class="form-label fw-bold"style="color: rgba(0, 0, 0, 0.703);" >Email Address <span style="color:red">*</span></label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+
+            <!-- Mobile Number -->
+            <div class="col-md-6 mb-3">
+              <label class="form-label fw-bold" style="color: rgba(0, 0, 0, 0.703);">Mobile Number <span style="color:red">*</span></label>
+              <input type="tel" class="form-control" name="mobile" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="col-md-6 mb-3">
+  <div class="inline-label">
+    <label class="form-label fw-bold" style="color: rgba(0, 0, 0, 0.703);">
+      Gender <span style="color:red">*</span>
+    </label>
+
+    <select name="gender" class="form-control" required style="width: 55%;">
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
+</div>
+
+<style>
+  .inline-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inline-label select {
+  width: 50%;
+}
+
+</style>
+
+            <!-- College / University -->
+            <div class="col-md-12 mb-3">
+              <label class="form-label fw-bold" style="color: rgba(0, 0, 0, 0.703);">College / University Name</label>
+              <input type="text" class="form-control" name="college">
+            </div>
+
+            <!-- Current Course -->
+            <div class="col-md-12 mb-3">
+              <label class="form-label fw-bold" style="color: rgba(0, 0, 0, 0.703);">Current Course</label>
+              <input type="text" class="form-control" name="course">
+            </div>
+
+            <!-- Internship Mode -->
+            <div class="col-md-6 mb-3">
+              <label class="form-label fw-bold" style="color: rgba(0, 0, 0, 0.703);">Preferred Internship Mode <span style="color:red">*</span></label>
+              <select name="mode" class="form-control" required>
+                <option value="">Select Mode</option>
+                <option>Online</option>
+                <option>Onsite</option>
+              </select>
+            </div>
+
+            <!-- Duration -->
+            <div class="col-md-6 mb-3">
+              <label class="form-label fw-bold" style="color: rgba(0, 0, 0, 0.703);">Preferred Internship Duration <span style="color:red">*</span></label>
+              <select name="duration" class="form-control" required>
+                <option value="">Select Duration</option>
+                <option>2 Weeks</option>
+                <option>1 Month</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- Cybersecurity Knowledge Rating -->
+            <div class="col-md-12 mb-4">
+              <label class="form-label fw-bold" style="color: rgba(0, 0, 0, 0.703);">Rate your cybersecurity knowledge <span style="color:red">*</span></label>
+              <div class="d-flex justify-content-between px-1 mt-2 fw-bold">
+                <span style="color: rgba(0, 0, 0, 0.503);">Beginner</span>
+                <span style="color: rgba(0, 0, 0, 0.703);">Advanced</span>
+              </div>
+              <input type="range" name="knowledge" min="1" max="5" class="form-range" required>
+            </div>
+
+            <!-- Referral -->
+            <div class="col-md-12 mb-3">
+              <label class="form-label fw-bold" style="color: rgba(0, 0, 0, 0.703);">Refer a friend who’s interested in cybersecurity!</label>
+              <textarea name="referral" class="form-control" placeholder="Enter friend’s name or email"></textarea>
+              <small class="text-muted" style="color: rgba(0, 0, 0, 0.703);">
+                🎁 You’ll receive a 5% offer when your friend successfully registers through your referral.
+              </small>
+            </div>
+
+            <!-- Submit -->
+            <div class="col-md-12 text-center mt-3">
+              <button type="submit" class="vl-btn1 w-100 py-2">
+                Submit Registration <i class="fa-solid fa-arrow-right ms-2"></i>
+              </button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+
     </div>
   </div>
+</div>
+
 
   <!--===== JS SCRIPT LINK =======-->
   <script src="assets/js/plugins/jquery-3-7-1.min.js"></script>
@@ -1465,7 +1771,7 @@
       const $btn = $(".vl-btn1");
       $btn.prop("disabled", true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
       $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbz7BDKkr1YlqlROgUFsJ2dzwiseNd-sEgMHaE7VsvryTtRB-5rvfg1PE1EnDqERDLEKFQ/exec",
+        url: "https://script.google.com/macros/s/AKfycbxuR1qxXf64svFvSPSt5uzUTWk3E8eJK0KwDuc5ERndtDmixX6gNEbxM4uOJyMbAThYEg/exec",
         data: $("#courseForm").serialize(),
         method: "POST",
         success: function (response) {
@@ -1511,5 +1817,84 @@
       });
     });
   </script>
+
+
+  <script>
+    $("#courseForm").submit(function (e) {
+      e.preventDefault();
+
+      // Get the submit button
+      const $btn = $(".vl-btn1");
+
+      // Disable button + show loading text
+      $btn.prop("disabled", true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
+
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbznbVVR_rHjW82lL61qiroiqzv64PPkUE17CJauzWcCRgfwNTt5wQWtDmx6_Y_-BPkY/exec",
+        data: $("#courseForm").serialize(),
+        method: "POST",
+        success: function (response) {
+          alert("Form submitted successfully");
+          window.location.reload();
+        },
+        error: function (err) {
+
+          $btn.prop("disabled", false).html('Send Now <i class="fa-solid fa-arrow-right"></i>');
+        }
+      });
+    });
+  </script>
+
+<!-- 
+<script>
+$(document).ready(function () {
+
+  // Form Submit Handler
+  $("#courseForm").on("submit", function (e) {
+    e.preventDefault();
+
+    const $btn = $(".vl-btn1");
+    const $form = $(this);
+
+    // Disable Button & Show Loader
+    $btn.prop("disabled", true).html(
+      'Submitting... <i class="fa-solid fa-spinner fa-spin"></i>'
+    );
+
+    $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbznbVVR_rHjW82lL61qiroiqzv64PPkUE17CJauzWcCRgfwNTt5wQWtDmx6_Y_-BPkY/exec",
+      method: "POST",
+      data: $form.serialize(),
+
+      success: function (response) {
+        // Success alert
+        alert("Registration submitted successfully!");
+
+        // Reset form
+        $form[0].reset();
+
+        // Close modal
+        $("#quoteModal").modal("hide");
+
+        // Restore button
+        $btn.prop("disabled", false).html(
+          'Submit Registration <i class="fa-solid fa-arrow-right ms-2"></i>'
+        );
+      },
+
+      error: function () {
+        alert("Something went wrong. Please try again.");
+
+        // Re-enable button
+        $btn.prop("disabled", false).html(
+          'Submit Registration <i class="fa-solid fa-arrow-right ms-2"></i>'
+        );
+      }
+    });
+  });
+
+});
+</script> -->
+
 </body>
 </html>
