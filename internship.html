@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Program | HackRealm Academy</title>
+
+  <!--===== FAB ICON=======-->
+  <link rel="shortcut icon" href="assets/img/logo/newpreloader.png" type="image/x-icon">
+
+  <!--===== CSS LINK (From Your Reference) =======-->
+  <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/plugins/aos.css">
+  <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/plugins/slick-slider.css">
+  <link rel="stylesheet" href="assets/css/plugins/sidebar.css">
+  <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+  <link rel="stylesheet" href="assets/css/plugins/swiper-slider.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <!-- Scripts required in Head -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Google Fonts: Brand Identity (Archivo & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================
+       CORE THEME: HACKREALM BRAND IDENTITY 2025
+       ========================================= */
+    :root {
+      /* Brand Colors */
+      --brand-magenta: #ed358f;
+      --brand-blue: #383293;
+      --brand-purple: #300038;
+      --deep-void: #05020a;
+      
+      /* Utilities */
+      --white: #ffffff;
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      
+      /* Typography */
+      --font-heading: 'Archivo', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--brand-purple);
+      font-family: var(--font-body);
+      color: #e0e0e0;
+      overflow-x: hidden;
+      /* Background Image for Body */
+      background-image: radial-gradient(circle at 10% 20%, rgba(56, 50, 147, 0.4) 0%, var(--brand-purple) 60%);
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--brand-purple); }
+    ::-webkit-scrollbar-thumb { background: var(--brand-magenta); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--brand-blue); }
+
+    /* UTILITIES */
+    .sp1 { padding: 100px 0; position: relative; z-index: 2; }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, var(--white) 0%, var(--brand-magenta) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .text-magenta { color: var(--brand-magenta); }
+
+    /* Animation: Neon Flicker */
+    @keyframes neon-flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 10px var(--brand-magenta), 0 0 20px var(--brand-magenta);
+      }
+      20%, 24%, 55% {
+        text-shadow: none;
+      }
+    }
+
+    .neon-text {
+      animation: neon-flicker 3s infinite alternate;
+    }
+
+    /* =========================================
+       HEADER OVERRIDES FOR INTERNSHIP PAGE
+       ========================================= */
+    /* Force header to be absolute and on top of the hero */
+    .homepage5-body {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: transparent;
+    }
+    
+    /* Force text color white for visibility on dark background */
+    .vl-main-menu ul li a {
+        color: #fff !important;
+        font-family: var(--font-heading);
+        font-weight: 600;
+    }
+    .vl-main-menu ul li a:hover {
+        color: var(--brand-magenta) !important;
+    }
+    
+    /* Submenu adjustments */
+    .vl-main-menu ul li ul.sub-menu {
+        background: #300038; /* Brand Purple */
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* =========================================
+       HERO SECTION
+       ========================================= */
+    .cyber-hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(5, 2, 10, 0.6) 0%, var(--brand-purple) 100%), 
+                  url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .cyber-hero::after {
+      content: '';
+      position: absolute;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(237, 53, 143, 0.1), transparent 70%);
+      z-index: 1;
+      animation: pulse-glow 5s infinite alternate;
+    }
+
+    @keyframes pulse-glow {
+      0% { opacity: 0.5; transform: scale(1); }
+      100% { opacity: 0.8; transform: scale(1.1); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, var(--brand-blue), var(--brand-magenta));
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 24px;
+      box-shadow: 0 0 20px rgba(237, 53, 143, 0.4);
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+
+    .hero-title span { 
+      background: linear-gradient(90deg, var(--brand-magenta), #ff8ec3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* =========================================
+       WARNETICS ALLIANCE (FUTURISTIC)
+       ========================================= */
+    .alliance-section {
+      background: linear-gradient(180deg, var(--brand-purple) 0%, #1a0020 100%);
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .glass-card-futuristic {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 60px 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .glass-card-futuristic::after {
+        content: '';
+        position: absolute;
+        bottom: 0; right: 0; width: 100%; height: 100%;
+        border-radius: 20px;
+        box-shadow: inset -5px -5px 20px rgba(237, 53, 143, 0.3);
+        pointer-events: none;
+    }
+
+    .partner-logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .partner-logo {
+      max-width: 240px;
+      filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+    }
+    
+    .official-partner-tag {
+        margin-top: 20px; 
+        font-family: var(--font-heading); 
+        font-weight: 700; 
+        letter-spacing: 2px; 
+        color: var(--brand-magenta);
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    /* =========================================
+       FLEXIBILITY & EXTRA-CURRICULAR (FUTURISTIC)
+       ========================================= */
+    .flex-section {
+      background: #0d0614;
+      padding: 100px 0;
+    }
+
+    /* Futuristic Flex Card */
+    .flex-card {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 40px 30px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      height: 100%; /* Important for alignment */
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    /* Top Border Accent (Blue by default) */
+    .flex-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 4px;
+      background: var(--brand-blue);
+      box-shadow: 0 0 15px var(--brand-blue);
+      transition: 0.4s;
+    }
+
+    /* Special Styling for "Beyond Class" (Pink/Magenta Accent) */
+    .flex-card.magenta-accent::before {
+      background: var(--brand-magenta);
+      box-shadow: 0 0 15px var(--brand-magenta);
+    }
+
+    /* Hover State */
+    .flex-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    .flex-icon {
+      font-size: 36px;
+      color: var(--brand-blue); /* Default Blue */
+      margin-bottom: 25px;
+      transition: 0.4s;
+    }
+
+    /* Icon color for Magenta card */
+    .flex-card.magenta-accent .flex-icon {
+      color: var(--brand-magenta);
+    }
+
+    .flex-card:hover .flex-icon {
+      transform: scale(1.1);
+      text-shadow: 0 0 15px currentColor;
+    }
+
+    .flex-title {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 15px;
+    }
+
+    .flex-desc {
+      color: #aaa;
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* =========================================
+       HEX-HUB EXPERIENCE SECTION
+       ========================================= */
+    .hex-section {
+      background: radial-gradient(circle at center, #1a0020 0%, var(--brand-purple) 70%);
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .hex-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      height: 600px; /* Desktop Height */
+    }
+
+    /* Central Hexagon */
+    .center-hex {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      z-index: 10;
+      border: 4px solid var(--brand-magenta);
+      box-shadow: 0 0 50px rgba(237, 53, 143, 0.4);
+      transition: 0.5s;
+    }
+    
+    .center-hex:hover {
+      box-shadow: 0 0 80px rgba(237, 53, 143, 0.8);
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+    
+    /* Center Overlay */
+    .center-hex::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(48, 0, 56, 0.4);
+    }
+    
+    .center-icon {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      color: #fff;
+      z-index: 11;
+      text-shadow: 0 0 20px rgba(0,0,0,0.8);
+    }
+
+    /* Connecting Lines (Desktop Only) */
+    .connector-line {
+      position: absolute;
+      top: 50%; left: 50%;
+      height: 2px;
+      background: transparent;
+      border-top: 2px dashed rgba(255, 255, 255, 0.3);
+      transform-origin: 0 0;
+      z-index: 1;
+    }
+
+    /* Feature Items */
+    .hex-item {
+      position: absolute;
+      width: 280px;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 5;
+    }
+
+    .hex-item:hover {
+      transform: scale(1.05);
+    }
+
+    .hex-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--brand-purple);
+      border: 2px solid var(--brand-magenta);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--white);
+      margin: 0 auto 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+      transition: 0.3s;
+    }
+    
+    .hex-item:hover .hex-icon {
+      background: var(--brand-magenta);
+      box-shadow: 0 0 30px var(--brand-magenta);
+    }
+
+    .hex-item h4 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    /* Positioning Items (Clockwise from Top Right) */
+    .pos-1 { top: 5%; right: 20%; }
+    .pos-2 { top: 40%; right: 0%; }
+    .pos-3 { bottom: 5%; right: 20%; }
+    .pos-4 { bottom: 5%; left: 20%; }
+    .pos-5 { top: 40%; left: 0%; }
+    .pos-6 { top: 5%; left: 20%; }
+
+    /* Connector Rotations */
+    .line-1 { width: 180px; transform: rotate(-60deg); }
+    .line-2 { width: 220px; transform: rotate(0deg); }
+    .line-3 { width: 180px; transform: rotate(60deg); }
+    .line-4 { width: 180px; transform: rotate(120deg); }
+    .line-5 { width: 220px; transform: rotate(180deg); }
+    .line-6 { width: 180px; transform: rotate(240deg); }
+
+    /* Mobile Hex Reset */
+    @media (max-width: 991px) {
+      .hex-container { height: auto; display: flex; flex-direction: column; gap: 40px; align-items: center; }
+      .center-hex { position: relative; top: auto; left: auto; transform: none; margin-bottom: 40px; }
+      .hex-item { position: relative; top: auto !important; left: auto !important; right: auto !important; bottom: auto !important; }
+      .connector-line { display: none; }
+    }
+
+    /* =========================================
+       MODULES GRID
+       ========================================= */
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .module-box {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 30px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      transition: 0.3s;
+    }
+
+    .module-box:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--brand-magenta);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .mod-num {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background: var(--brand-magenta);
+      color: var(--white);
+      border-radius: 50%;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(237, 53, 143, 0.3);
+    }
+
+    .mod-content h4 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .mod-content p {
+      font-size: 14px;
+      color: #aaa;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* =========================================
+       ADVANCED ROADMAP SECTION (ANIMATED)
+       ========================================= */
+    .roadmap-section-adv {
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+      background: #020105;
+    }
+
+    /* Cyber Grid Background Animation */
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: 
+        linear-gradient(rgba(56, 50, 147, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 50, 147, 0.2) 1px, transparent 1px);
+      background-size: 50px 50px;
+      z-index: 0;
+      perspective: 1000px;
+      transform: perspective(500px) rotateX(60deg) scale(2);
+      animation: gridMove 20s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes gridMove {
+      0% { transform: perspective(500px) rotateX(60deg) scale(2) translateY(0); }
+      100% { transform: perspective(500px) rotateX(60deg) scale(2) translateY(50px); }
+    }
+
+    .rm-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-top: 80px;
+      z-index: 2;
+    }
+
+    /* Glowing Path Line */
+    .rm-line-bg {
+      position: absolute;
+      top: 50%; left: 0; width: 100%; height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-50%);
+      z-index: 0;
+      border-radius: 4px;
+    }
+    
+    .rm-line-fill {
+      position: absolute;
+      top: 50%; left: 0; width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--brand-blue), var(--brand-magenta));
+      transform: translateY(-50%);
+      z-index: 0;
+      box-shadow: 0 0 20px var(--brand-magenta);
+      animation: fillPath 3s infinite alternate;
+    }
+
+    @keyframes fillPath {
+      0% { width: 20%; opacity: 0.5; }
+      100% { width: 100%; opacity: 1; }
+    }
+
+    .rm-node {
+      position: relative;
+      z-index: 2;
+      width: 220px;
+      text-align: center;
+    }
+
+    .rm-circle {
+      width: 140px;
+      height: 140px;
+      background: rgba(20, 0, 30, 0.9);
+      border: 2px solid var(--brand-blue);
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    
+    /* Active Node Pulse */
+    .rm-node:hover .rm-circle {
+      border-color: var(--brand-magenta);
+      background: var(--brand-purple);
+      transform: scale(1.15);
+      box-shadow: 0 0 50px rgba(237, 53, 143, 0.6);
+      animation: pulse-node 1.5s infinite;
+    }
+
+    @keyframes pulse-node {
+      0% { box-shadow: 0 0 0 0 rgba(237, 53, 143, 0.7); }
+      70% { box-shadow: 0 0 0 20px rgba(237, 53, 143, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(237, 53, 143, 0); }
+    }
+
+    .rm-step {
+      font-size: 14px;
+      color: var(--brand-magenta);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .rm-title {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+    
+    .rm-desc {
+      font-size: 15px;
+      color: #aaa;
+      margin-top: 15px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: 0.3s;
+    }
+    
+    .rm-node:hover .rm-desc {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 991px) {
+      .rm-container { flex-direction: column; gap: 50px; }
+      .rm-line-bg, .rm-line-fill { width: 4px; height: 100%; left: 50%; top: 0; transform: translateX(-50%); }
+      .rm-desc { opacity: 1; transform: none; }
+    }
+
+
+    /* =========================================
+       CERTIFICATE & FAQ (Base Styles)
+       ========================================= */
+    .cert-showcase { padding: 30px; }
+    .cert-img-wrapper {
+      padding: 8px;
+      background: linear-gradient(45deg, var(--brand-blue), var(--brand-magenta));
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .cert-img-wrapper img { width: 100%; border-radius: 8px; display: block; }
+
+    .cyber-accordion-item {
+      background: transparent;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+    }
+    .cyber-accordion-header {
+      padding: 24px 30px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      color: #e0e0e0;
+      font-weight: 600;
+      font-family: var(--font-heading);
+    }
+    .cyber-accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.4s;
+      padding: 0 30px;
+      background: rgba(237, 53, 143, 0.05);
+    }
+    .cyber-accordion-item.active .cyber-accordion-header { color: var(--brand-magenta); }
+    .cyber-accordion-body p { padding: 20px 0; color: #ccc; }
+
+    /* CTA BUTTON & INPUT RE-STYLE */
+    .cta-bg-area-futuristic {
+        background: radial-gradient(circle at center, #1a0020 0%, #000 100%);
+        border: 1px solid rgba(56, 50, 147, 0.3);
+        box-shadow: 0 0 40px rgba(56, 50, 147, 0.2);
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        padding: 80px 50px;
+    }
+    
+    .cta-bg-area-futuristic::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 2px;
+        background: linear-gradient(90deg, transparent, var(--brand-magenta), transparent);
+    }
+
+    .cta-input-style {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 8px;
+        width: 100%;
+        margin-bottom: 20px;
+        transition: 0.3s;
+    }
+    
+    .cta-input-style:focus {
+        background: rgba(56, 50, 147, 0.1);
+        border-color: var(--brand-magenta);
+        outline: none;
+        box-shadow: 0 0 15px rgba(237, 53, 143, 0.2);
+    }
+
+    .vl-btn1 {
+      background: var(--brand-magenta);
+      color: var(--white);
+      padding: 16px 42px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-radius: 50px;
+      display: inline-block;
+      border: none;
+      box-shadow: 0 4px 15px rgba(237, 53, 143, 0.3);
+      transition: 0.3s;
+    }
+    .vl-btn1:hover {
+      background: var(--brand-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(56, 50, 147, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--===== PRELOADER STARTS =======-->
+  <div class="preloader">
+    <div class="loading-container">
+      <div class="loading"></div>
+      <div id="loading-icon"><img src="assets/img/logo/imagelogohack.png" alt=""></div>
+    </div>
+  </div>
+  <!--===== PRELOADER ENDS =======-->
+
+  <!--===== PROGRESS STARTS=======-->
+  <div class="paginacontainer">
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+  </div>
+  <!--===== PROGRESS ENDS=======-->
+
+  <!--===== HEADER START (FROM YOUR REFERENCE) =======-->
+  <header class="homepage5-body">
+    <div id="vl-header-sticky" class="vl-header-area vl-transparent-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-2 col-md-6 col-6">
+            <div class="vl-logo">
+              <a href="index.html"><img src="assets/img/logo/logohackrealm.png" alt=""></a>
+            </div>
+          </div>
+          <div class="col-xl-7 d-none d-xl-block">
+            <div class="vl-main-menu text-center">
+              <nav class="vl-mobile-menu-active">
+                <ul>
+                  <li class="">
+                    <a href="index.html">Home <span><i class="fa-solid d-xl-inline d-none"></i></span></a>
+                  </li>
+                  <li><a href="courses.html">Courses <span><i class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
+                    <ul class="sub-menu">
+                      <li><a href="course-dcna-single.html">DCNA</a></li>
+                      <li><a href="course-dpam-single.html">DPAM</a></li>
+                      <li><a href="course-dpen-single.html">DPEN</a></li>
+                      <li><a href="course-dsoc-single.html">DSOC</a></li>
+                    </ul>
+                  </li>
+                  <!-- ADDED INTERNSHIP LINK HERE -->
+                  <li><a href="internship.html">Internship <span><i class="fa-solid d-xl-inline d-none"></i></span></a></li>
+                  <li><a href="blog.html">Blogs <span><i class="fa-solid d-xl-inline d-none"></i></span></a></li>
+                  <li class="">
+                    <a href="about.html">About Us<span><i class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
+                    <ul class="sub-menu">
+                      <li><a href="team.html">Our Team</a></li>
+                      <li><a href="testimonial.html">Testimonials</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="faq.html">FAQ's</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 col-6">
+            <div class="vl-hero-btn d-none d-xl-block text-end">
+              <div class="sidebar_btn-area">
+                <div class="search-icon header__search header-search-btn">
+                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <path d="M25 25L17 17M1 10.3333C1 11.559 1.24141 12.7727 1.71046 13.905C2.1795 15.0374 2.86699 16.0663 3.73367 16.933C4.60035 17.7997 5.62925 18.4872 6.76162 18.9562C7.89399 19.4253 9.10766 19.6667 10.3333 19.6667C11.559 19.6667 12.7727 19.4253 13.905 18.9562C15.0374 18.4872 16.0663 17.7997 16.933 16.933C17.7997 16.0663 18.4872 15.0374 18.9562 13.905C19.4253 12.7727 19.6667 11.559 19.6667 10.3333C19.6667 9.10766 19.4253 7.89399 18.9562 6.76162C18.4872 5.62925 17.7997 4.60035 16.933 3.73367C16.0663 2.86699 15.0374 2.1795 13.905 1.71046C12.7727 1.24141 11.559 1 10.3333 1C9.10766 1 7.89399 1.24141 6.76162 1.71046C5.62925 2.1795 4.60035 2.86699 3.73367 3.73367C2.86699 4.60035 2.1795 5.62925 1.71046 6.76162C1.24141 7.89399 1 9.10766 1 10.3333Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></a>
+                </div>
+                <button class="hamburger_menu"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M3.33301 8H24.6663M3.33301 16H24.6663M3.33301 24H12.6663" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></button>
+                <div class="btn_area1">
+                  <a href="#" class="vl-btn1" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                    Get A Quote <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="vl-header-action-item d-block d-xl-none">
+              <button type="button" class="vl-offcanvas-toggle">
+                <i class="fa-solid fa-bars-staggered"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--===== HEADER END =======-->
+
+  <!--===== MOBILE HEADER STARTS =======-->
+  <div class="homepage1-body">
+    <div class="vl-offcanvas">
+      <div class="vl-offcanvas-wrapper">
+        <div class="vl-offcanvas-header d-flex justify-content-between align-items-center mb-90">
+          <div class="vl-offcanvas-logo">
+            <a href="index.html"><img src="assets/img/logo/logohackrealm.png" alt=""></a>
+          </div>
+          <div class="vl-offcanvas-close">
+            <button class="vl-offcanvas-close-toggle"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="vl-offcanvas-menu d-xl-none mb-40">
+          <nav></nav>
+        </div>
+        <div class="space20"></div>
+        <div class="vl-offcanvas-info">
+          <h3 class="vl-offcanvas-sm-title">Contact Us</h3>
+          <div class="space20"></div>
+          <span><a href="#"> <i class="fa-regular fa-envelope"></i> +91 7994466822</a></span>
+          <span><a href="#"><i class="fa-solid fa-phone"></i> admissions@hackrealmacademy.com</a></span>
+          <span><a href="#"><i class="fa-solid fa-location-dot"></i> 10/207/E, X5PP+4PW, Tirurkad, Malappuram, Perinthelmanna, Kerala, India, 679321</a></span>
+        </div>
+        <div class="space20"></div>
+        <div class="vl-offcanvas-social">
+          <h3 class="vl-offcanvas-sm-title">Follow Us</h3>
+          <div class="space20"></div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="vl-offcanvas-overlay"></div>
+  </div>
+  <!--===== MOBILE HEADER ENDS =======-->
+
+  <!--===== HERO AREA =======-->
+  <div class="cyber-hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-10 hero-content" data-aos="zoom-in" data-aos-duration="1200">
+          <div class="hero-badge">Curiosity Meets Mastery</div>
+          <h1 class="hero-title">Elite Cybersecurity <br><span class="neon-text">Internship Program</span></h1>
+          <p style="font-size: 1.25rem; color: #d0d0d0; max-width: 700px; margin: 0 auto; font-weight: 300;">
+            Go beyond traditional learning. Build the next generation of defense strategies with our dynamic ecosystem of innovation and intelligence.
+          </p>
+          <div style="margin-top: 40px;">
+            <a href="#apply" class="vl-btn1">Initiate Application <i class="fa-solid fa-angle-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--===== STRATEGIC ALLIANCE (FUTURISTIC) =======-->
+  <div class="sp1 alliance-section">
+    <div class="container">
+      <div class="glass-card-futuristic">
+        <div class="row align-items-center">
+          <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="fade-right">
+             <div class="partner-logo-container">
+                 <img src="https://warnetics.com/wp-content/uploads/2023/11/Warnetics-Logo-Dark.png" onerror="this.src='assets/img/logo/warnetics-logo.png'; this.onerror=null; this.alt='Warnetics Logo Placeholder';" alt="Warnetics Pvt Ltd" class="partner-logo">
+                 <div class="official-partner-tag">OFFICIAL PARTNER</div>
+             </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <h5 class="text-magenta" style="text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: 700; margin-bottom: 15px;">Strategic Alliance</h5>
+            <h2 style="font-family: var(--font-heading); font-size: 48px; font-weight: 800; margin-bottom: 25px; color: var(--white); text-shadow: 0 0 20px rgba(255,255,255,0.2);">Experience The Real World</h2>
+            <p style="font-size: 18px; line-height: 1.8; color: #ccc;">
+              Bridge the gap between theory and high-stakes reality. In partnership with <strong>Warnetics Private Limited</strong>, we provide an environment where you think like hackers and act like protectors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--===== FLEXIBILITY & ACADEMIC VALUE (FUTURISTIC) =======-->
+  <div class="flex-section">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col-12">
+          <h5 class="text-magenta" style="text-transform: uppercase; font-weight: 700; letter-spacing: 2px;">Why Choose Us?</h5>
+          <h2 style="font-family: var(--font-heading); font-size: 3.5rem; font-weight: 800; color: var(--white);">Designed for Students & Pros</h2>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Feature 1: Hybrid Mode -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex-card">
+            <div class="flex-icon"><i class="fa-solid fa-globe"></i></div>
+            <h4 class="flex-title">Hybrid Learning</h4>
+            <p class="flex-desc">Choose between **Online** remote sessions or **Offline** immersive training at our HQ labs.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2: Custom Duration -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex-card">
+            <div class="flex-icon"><i class="fa-solid fa-clock"></i></div>
+            <h4 class="flex-title">Flexible Duration</h4>
+            <p class="flex-desc">Customizable timelines from **2 weeks to 6 months** to fit your academic calendar or sabbatical.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3: College Credit -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex-card">
+            <div class="flex-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h4 class="flex-title">Academic Credit</h4>
+            <p class="flex-desc">Our certification is widely accepted by Colleges & Universities for mandatory internship credits.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4: Extra Curricular (Highlighted) -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="flex-card magenta-accent">
+            <div class="flex-icon"><i class="fa-solid fa-trophy"></i></div>
+            <h4 class="flex-title">Beyond Class</h4>
+            <p class="flex-desc">Participate in regular **CTFs, Hackathons**, and live bug bounty hunting sessions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--===== HEX-HUB EXPERIENCE SECTION =======-->
+  <div class="hex-section">
+    <div class="container text-center mb-5">
+      <h2 style="font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: var(--white);">Get Hands-On Experience</h2>
+      <p style="color: #aaa;">Explore Our Cyber Security Internships</p>
+    </div>
+
+    <div class="hex-container">
+      <!-- Central Node -->
+      <div class="center-hex"></div>
+      <div class="center-icon"><i class="fa-solid fa-lock"></i></div>
+      
+      <!-- Connectors (Visual Only) -->
+      <div class="connector-line line-1" style="transform: rotate(-60deg);"></div>
+      <div class="connector-line line-2" style="transform: rotate(0deg);"></div>
+      <div class="connector-line line-3" style="transform: rotate(60deg);"></div>
+      <div class="connector-line line-4" style="transform: rotate(120deg);"></div>
+      <div class="connector-line line-5" style="transform: rotate(180deg);"></div>
+      <div class="connector-line line-6" style="transform: rotate(240deg);"></div>
+
+      <!-- Item 1: Top Right (New Text) -->
+      <div class="hex-item pos-1" data-aos="fade-left" data-aos-delay="100">
+        <div class="hex-icon"><i class="fa-solid fa-file-contract"></i></div>
+        <h4>Master Compliance Frameworks & Protocols</h4>
+      </div>
+
+      <!-- Item 2: Right (New Text) -->
+      <div class="hex-item pos-2" data-aos="fade-left" data-aos-delay="200">
+        <div class="hex-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h4>Execute Real-World Web Security Audits</h4>
+      </div>
+
+      <!-- Item 3: Bottom Right (New Text) -->
+      <div class="hex-item pos-3" data-aos="fade-left" data-aos-delay="300">
+        <div class="hex-icon"><i class="fa-solid fa-brain"></i></div>
+        <h4>Level Up Your Tactical Skillset</h4>
+      </div>
+
+      <!-- Item 4: Bottom Left (New Text) -->
+      <div class="hex-item pos-4" data-aos="fade-right" data-aos-delay="300">
+        <div class="hex-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h4>Sharpen Analytical & Troubleshooting Minds</h4>
+      </div>
+
+      <!-- Item 5: Left (New Text) -->
+      <div class="hex-item pos-5" data-aos="fade-right" data-aos-delay="200">
+        <div class="hex-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <h4>Network with Industry Veterans</h4>
+      </div>
+
+      <!-- Item 6: Top Left (New Text) -->
+      <div class="hex-item pos-6" data-aos="fade-right" data-aos-delay="100">
+        <div class="hex-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>Launch Your Career in Cyber Defense</h4>
+      </div>
+    </div>
+  </div>
+
+  <!--===== MODULE GRID =======-->
+  <div class="sp1" style="background: rgba(0,0,0,0.2);">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col-12">
+          <h5 class="text-magenta" style="text-transform: uppercase; font-weight: 700;">Complete Syllabus</h5>
+          <h2 style="font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: var(--white);">Modules In This Course</h2>
+        </div>
+      </div>
+
+      <div class="module-grid">
+        <!-- Mod 1 -->
+        <div class="module-box" data-aos="fade-up">
+          <div class="mod-num">01</div>
+          <div class="mod-content">
+            <h4>Foundation & Recon</h4>
+            <p>Foot Printing, Scanning, Google Dorking, Cyber Threat Intelligence, OSINT.</p>
+          </div>
+        </div>
+
+        <!-- Mod 2 -->
+        <div class="module-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="mod-num">02</div>
+          <div class="mod-content">
+            <h4>System Hacking</h4>
+            <p>Vulnerability Analysis, System Hacking, Exploitation, Metasploit Framework.</p>
+          </div>
+        </div>
+
+        <!-- Mod 3 -->
+        <div class="module-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="mod-num">03</div>
+          <div class="mod-content">
+            <h4>Red Teaming Ops</h4>
+            <p>Advanced Adversary Simulation, C2 Infrastructure, Evasion Techniques.</p>
+          </div>
+        </div>
+
+        <!-- Mod 4 -->
+        <div class="module-box" data-aos="fade-up" data-aos-delay="300">
+          <div class="mod-num">04</div>
+          <div class="mod-content">
+            <h4>Wireless Hacking</h4>
+            <p>Wireless Sniffing, WEP/WPA Cracking, RouterSploit, Network Defense.</p>
+          </div>
+        </div>
+
+        <!-- Mod 5 -->
+        <div class="module-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="mod-num">05</div>
+          <div class="mod-content">
+            <h4>Social Engineering</h4>
+            <p>Phishing, Hacking Web Applications, SQL Injection, XSS.</p>
+          </div>
+        </div>
+
+        <!-- Mod 6 -->
+        <div class="module-box" data-aos="fade-up" data-aos-delay="500">
+          <div class="mod-num">06</div>
+          <div class="mod-content">
+            <h4>Network Enumeration</h4>
+            <p>Art of Scanning, Protocol Enumeration, Firewall Evasion.</p>
+          </div>
+        </div>
+
+         <!-- Mod 7 -->
+        <div class="module-box" data-aos="fade-up" data-aos-delay="600">
+          <div class="mod-num">07</div>
+          <div class="mod-content">
+            <h4>Web App Testing</h4>
+            <p>Advanced Web Application Security, Bug Bounty Hunting Methodology.</p>
+          </div>
+        </div>
+        
+        <!-- Mod 8 -->
+        <div class="module-box" data-aos="fade-up" data-aos-delay="700">
+           <div class="mod-num">08</div>
+           <div class="mod-content">
+             <h4>Malware Threats</h4>
+             <p>Virus Analysis, Trojans, Worms, Backdoors, Malware Defenses.</p>
+           </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--===== ADVANCED ROADMAP SECTION (ANIMATED) =======-->
+  <div class="sp1 roadmap-section-adv">
+    <div class="grid-bg"></div> <!-- Grid Animation Background -->
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12" style="position: relative; z-index: 2;">
+          <h5 class="text-magenta" style="text-transform: uppercase; font-weight: 700; letter-spacing: 2px;">Your Journey</h5>
+          <h2 style="font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: var(--white);">Internship Roadmap</h2>
+        </div>
+      </div>
+
+      <div class="rm-container">
+        <!-- Background Lines -->
+        <div class="rm-line-bg"></div>
+        <div class="rm-line-fill"></div>
+
+        <!-- Node 1 -->
+        <div class="rm-node" data-aos="zoom-in" data-aos-delay="0">
+          <div class="rm-circle">
+            <span class="rm-step">Phase 01</span>
+            <span class="rm-title">Intro</span>
+          </div>
+          <p class="rm-desc">Foundation & Hacker Mindset</p>
+        </div>
+
+        <!-- Node 2 -->
+        <div class="rm-node" data-aos="zoom-in" data-aos-delay="200">
+          <div class="rm-circle">
+            <span class="rm-step">Phase 02</span>
+            <span class="rm-title">Offense</span>
+          </div>
+          <p class="rm-desc">Red Teaming, Recon & Exploitation</p>
+        </div>
+
+        <!-- Node 3 -->
+        <div class="rm-node" data-aos="zoom-in" data-aos-delay="400">
+          <div class="rm-circle">
+            <span class="rm-step">Phase 03</span>
+            <span class="rm-title">Web Ops</span>
+          </div>
+          <p class="rm-desc">Injection, OWASP & Bug Bounty</p>
+        </div>
+
+        <!-- Node 4 -->
+        <div class="rm-node" data-aos="zoom-in" data-aos-delay="600">
+          <div class="rm-circle">
+            <span class="rm-step">Phase 04</span>
+            <span class="rm-title">Defense</span>
+          </div>
+          <p class="rm-desc">SOC, SIEM & Incident Response</p>
+        </div>
+
+        <!-- Node 5 -->
+        <div class="rm-node" data-aos="zoom-in" data-aos-delay="800">
+          <div class="rm-circle">
+            <span class="rm-step">Phase 05</span>
+            <span class="rm-title" style="font-size: 18px;">Certification</span>
+          </div>
+          <p class="rm-desc">Capstone Report & Verified Credentials</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--===== CERTIFICATE =======-->
+  <div class="sp1" style="background: linear-gradient(180deg, #1a0020 0%, var(--brand-purple) 100%);">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+           <h5 class="text-magenta" style="text-transform: uppercase; font-weight: 700;">Certification</h5>
+           <h2 style="font-family: var(--font-heading); font-size: 42px; font-weight: 800; margin-bottom: 30px; color: var(--white);">Verified Credentials</h2>
+           <p style="color: #ccc; font-size: 18px; line-height: 1.7; margin-bottom: 30px;">
+             Earn a certificate that carries weight in the industry. Co-branded with Warnetics Pvt Ltd, proving you have tackled real-world challenges.
+           </p>
+           <a href="#apply" class="vl-btn1">Get Certified</a>
+        </div>
+
+        <div class="col-lg-6 text-center" data-aos="zoom-in-left">
+           <div class="cert-showcase">
+             <div class="cert-img-wrapper">
+               <img src="assets/img/badges/internship-certificate.png" alt="Internship Certificate Mockup">
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--===== CTA AREA ENDS =======-->
+  <div class="space100 d-lg-block d-none"></div>
+  <div class="space100 d-lg-none d-block"></div>
+  <!--===== CTA AREA STARTS =======-->
+  <div class="cta1-aection-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="cta-bg-area"
+            style="background-color: #000; padding: 60px 40px; border-radius: 12px; color: #fff;">
+            <img src="assets/img/elements/elements4.png" alt="" class="elements4">
+            <div class="row align-items-center">
+              <div class="col-xl-6">
+                <div class="cta-heading">
+                  <h2 data-aos="zoom-in" data-aos-duration="800">Learn Real-World Cyber Security with HackRealm</h2>
+                  <div class="space16"></div>
+                  <p data-aos="zoom-in" data-aos-duration="900">
+                    At <strong>HackRealm</strong>, we don’t just teach theory — we train you to think like a hacker and
+                    defend like a professional.
+                    Gain hands-on experience with real-world cyber attacks, network defense, and ethical hacking tools
+                    used by experts in the field.
+                  </p>
+                  <div class="space32"></div>
+                  <div class="form-area" data-aos="zoom-in" data-aos-duration="1100">
+                    <form>
+                      <input type="text" placeholder="Your Email Address">
+                      <button class="vl-btn1" type="submit">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-xl-1"></div>
+              <div class="col-xl-5" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="cta-images-area text-end">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--===== CTA AREA ENDS =======-->
+
+  <!--===== FOOTER AREA STARTS =======-->
+  <div class="vl-footer1-section-area">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-md-6">
+          <div class="footer-logo-area">
+            <!-- <img src="assets/img/logo/genlogo.png" alt="">
+              -->
+            <img src="assets/img/logo/logohackrealm.png" alt="">
+            <div class="space16"></div>
+            <p>Hackrealm is a leading cybersecurity training institute dedicated to preparing professionals for
+              real-world threats. We provide hands-on labs, corporate-style simulations, and industry-relevant training
+              for all skill levels.</p>
+            <div class="space24"></div>
+            <ul class="social-links">
+              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xl col-md-6">
+          <div class="space30 d-lg-none d-block"></div>
+          <div class="footer-widget-area foot-padding1">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="project.html">Why Choose Us</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xl col-md-6">
+          <div class="space30 d-lg-none d-block"></div>
+          <div class="footer-widget-area foot-padding2">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-xl col-md-6">
+          <div class="space30 d-lg-none d-block"></div>
+          <div class="footer-widget-area">
+            <h3>Contact Us</h3>
+            <ul>
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none">
+                    <path
+                      d="M12 14C11.2089 14 10.4355 13.7654 9.77772 13.3259C9.11992 12.8864 8.60723 12.2616 8.30448 11.5307C8.00173 10.7998 7.92252 9.99556 8.07686 9.21964C8.2312 8.44372 8.61216 7.73098 9.17157 7.17157C9.73098 6.61216 10.4437 6.2312 11.2196 6.07686C11.9956 5.92252 12.7998 6.00173 13.5307 6.30448C14.2616 6.60723 14.8864 7.11992 15.3259 7.77772C15.7654 8.43552 16 9.20888 16 10C15.9987 11.0605 15.5769 12.0772 14.827 12.827C14.0772 13.5769 13.0605 13.9987 12 14ZM12 7.6C11.5253 7.6 11.0613 7.74076 10.6666 8.00447C10.272 8.26819 9.96434 8.64302 9.78269 9.08156C9.60104 9.5201 9.55351 10.0027 9.64612 10.4682C9.73872 10.9338 9.9673 11.3614 10.3029 11.6971C10.6386 12.0327 11.0662 12.2613 11.5318 12.3539C11.9973 12.4465 12.4799 12.399 12.9184 12.2173C13.357 12.0357 13.7318 11.728 13.9955 11.3334C14.2592 10.9387 14.4 10.4747 14.4 10C14.3994 9.36368 14.1463 8.7536 13.6964 8.30365C13.2464 7.8537 12.6363 7.60064 12 7.6Z"
+                      fill="#5B5D61" />
+                    <path
+                      d="M12 23L5.86473 15.5382C5.77948 15.4262 5.69511 15.3135 5.61164 15.2C4.56416 13.776 3.99805 12.0373 4.00001 10.25C4.00001 8.06196 4.84286 5.96354 6.34315 4.41637C7.84344 2.86919 9.87827 2 12 2C14.1217 2 16.1566 2.86919 17.6569 4.41637C19.1571 5.96354 20 8.06196 20 10.25C20.0017 12.0365 19.4359 13.7743 18.3891 15.1978L18.3884 15.2C18.3884 15.2 18.1702 15.4955 18.1375 15.5353L12 23ZM6.77309 14.2963C6.77309 14.2963 6.94255 14.5272 6.98109 14.5767L12 20.681L17.0255 14.5685C17.0575 14.5272 17.2276 14.2948 17.2284 14.294C18.0845 13.1309 18.5472 11.7103 18.5455 10.25C18.5455 8.45979 17.8558 6.7429 16.6283 5.47703C15.4008 4.21116 13.736 3.5 12 3.5C10.264 3.5 8.59918 4.21116 7.37167 5.47703C6.14416 6.7429 5.45455 8.45979 5.45455 10.25C5.45276 11.7112 5.91596 13.1327 6.77309 14.2963Z"
+                      fill="#5B5D61" />
+                  </svg>10/207/E, X5PP+4PW, Tirurkad, Malappuram, Perinthelmanna, Kerala, India, 679321</a></li>
+              <li><a href="tel:(123)456-7890"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M19.95 21C17.8667 21 15.8083 20.546 13.775 19.638C11.7417 18.73 9.89167 17.4423 8.225 15.775C6.55833 14.1077 5.271 12.2577 4.363 10.225C3.455 8.19233 3.00067 6.134 3 4.05C3 3.75 3.1 3.5 3.3 3.3C3.5 3.1 3.75 3 4.05 3H8.1C8.33333 3 8.54167 3.07933 8.725 3.238C8.90833 3.39667 9.01667 3.584 9.05 3.8L9.7 7.3C9.73333 7.56667 9.725 7.79167 9.675 7.975C9.625 8.15833 9.53333 8.31667 9.4 8.45L6.975 10.9C7.30833 11.5167 7.704 12.1123 8.162 12.687C8.62 13.2617 9.12433 13.816 9.675 14.35C10.1917 14.8667 10.7333 15.346 11.3 15.788C11.8667 16.23 12.4667 16.634 13.1 17L15.45 14.65C15.6 14.5 15.796 14.3877 16.038 14.313C16.28 14.2383 16.5173 14.2173 16.75 14.25L20.2 14.95C20.4333 15.0167 20.625 15.1377 20.775 15.313C20.925 15.4883 21 15.684 21 15.9V19.95C21 20.25 20.9 20.5 20.7 20.7C20.5 20.9 20.25 21 19.95 21Z"
+                      fill="#5B5D61" />
+                  </svg> +91 7994466822</a></li>
+              <li><a href="mailto:info@hackrealmacadeny.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M21.5 5H3.5C3.10218 5 2.72064 5.15804 2.43934 5.43934C2.15804 5.72064 2 6.10218 2 6.5V18.5C2 18.8978 2.15804 19.2794 2.43934 19.5607C2.72064 19.842 3.10218 20 3.5 20H21.5C21.8978 20 22.2794 19.842 22.5607 19.5607C22.842 19.2794 23 18.8978 23 18.5V6.5C23 6.10218 22.842 5.72064 22.5607 5.43934C22.2794 5.15804 21.8978 5 21.5 5ZM19.85 6.5L12.5 11.585L5.15 6.5H19.85ZM3.5 18.5V7.1825L12.0725 13.115C12.198 13.2021 12.3472 13.2488 12.5 13.2488C12.6528 13.2488 12.802 13.2021 12.9275 13.115L21.5 7.1825V18.5H3.5Z"
+                      fill="#5B5D61" />
+                  </svg> info@hackrealmacademy.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="space60"></div>
+      <div class="col-xl-12">
+        <div class="copyright-area">
+          <a href="#">© 2025 Hackrealm. All Rights Reserved.</a>
+          <ul>
+            <li><a href="#">Privacy Policy</a><span> | </span></li>
+            <li><a href="#">Terms Of Condition</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== FOOTER AREA ENDS =======-->
+
+  <!--===== SIDEBAR STARTS =======-->
+  <div class="header-search-form-wrapper">
+    <div class="tx-search-close tx-close"><i class="fa-solid fa-xmark"></i></div>
+    <div class="header-search-container">
+      <form role="search" class="search-form">
+        <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+        <button type="submit" class="search-submit"><img src="assets/img/icons/search1.svg" alt=""></button>
+        <div id="searchResults" class="search-results"></div>
+      </form>
+    </div>
+  </div>
+  <div class="body-overlay"></div>
+
+  <div class="header-site-icon">
+    <div class="slide-bar slide-bar1">
+      <div class="sidebar-info">
+        <div class="sidebar-logo">
+          <a href="index.html">
+            <img src="assets/img/logo/logohackrealm.png" alt="logo">
+          </a>
+          <div class="close-mobile-menu">
+            <a><i class="fa-solid fa-xmark"></i></a>
+          </div>
+        </div>
+        <div class="space16"></div>
+        <div class="sidebar-content">
+          <p>We provide advanced cyber security courses designed to give you real world experience and practical defense skills.</p>
+        </div>
+        <div class="space32"></div>
+        <div class="btn-area">
+          <a href="contact.html" class="vl-btn1">Get in touch now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="space40"></div>
+        <div class="social-link-area">
+          <h3 class="sidebar-heading">Social Links</h3>
+          <ul>
+            <li>
+              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="space40"></div>
+      </div>
+    </div>
+  </div>
+  <!--===== SIDEBAR ENDS =======-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content p-4">
+        <div class="modal-header">
+          <h5 class="modal-title" id="quoteModalLabel">Join Our Courses Today</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="contact-widget-area-inner heading1">
+            <p>Unlock practical knowledge, expert insights, and hands-on experience. Register now to begin your path to success.</p>
+            <form id="courseForm" class="contact-boxarea" action="">
+              <div class="row">
+                <div class="col-xl-6 col-md-6 mb-3">
+                  <div class="input-area">
+                    <input type="text" name="full_name" id="full_name" placeholder="Full Name" required>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-md-6 mb-3">
+                  <div class="input-area">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="col-xl-12 col-md-12 mb-3">
+                  <div class="input-area">
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                  </div>
+                </div>
+                <div class="col-xl-12 col-md-12 mb-3">
+                  <div class="input-area">
+                    <input type="text" name="qualification" id="qualification" placeholder="Your Qualification">
+                  </div>
+                </div>
+                <div class="col-xl-12 col-md-12 mb-3">
+                  <div class="input-area">
+                    <select name="subject" id="subject" class="country-area nice-select" required>
+                      <option value="" data-display="Select Subject">Select Subject</option>
+                      <option value="dsoc">Diploma in Security Operations Center (DSOC)</option>
+                      <option value="dpen">Diploma in Penetration Testing (DPEN)</option>
+                      <option value="dcna" selected>Diploma in Cyber Network Administration (DCNA)</option>
+                      <option value="dpam">Diploma in Privileged Access Management (DPAM)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xl-12 col-md-12">
+                  <div class="input-area">
+                    <button type="submit" value="Submit" class="vl-btn1">Send Now <i class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--===== JS SCRIPT LINK =======-->
+  <script src="assets/js/plugins/jquery-3-7-1.min.js"></script>
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/fontawesome.js"></script>
+  <script src="assets/js/plugins/aos.js"></script>
+  <script src="assets/js/plugins/counter.js"></script>
+  <script src="assets/js/plugins/magnific-popup.js"></script>
+  <script src="assets/js/plugins/nice-select.js"></script>
+  <script src="assets/js/plugins/waypoints.js"></script>
+  <script src="assets/js/plugins/sidebar.js"></script>
+  <script src="assets/js/plugins/slick-slider.js"></script>
+  <script src="assets/js/plugins/swiper-slider.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    $("#courseForm").submit(function (e) {
+      e.preventDefault();
+      const $btn = $(".vl-btn1");
+      $btn.prop("disabled", true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbz7BDKkr1YlqlROgUFsJ2dzwiseNd-sEgMHaE7VsvryTtRB-5rvfg1PE1EnDqERDLEKFQ/exec",
+        data: $("#courseForm").serialize(),
+        method: "POST",
+        success: function (response) {
+          alert("Form submitted successfully");
+          window.location.reload();
+        },
+        error: function (err) {
+          alert("Something went wrong. Please try again.");
+          $btn.prop("disabled", false).html('Send Now <i class="fa-solid fa-arrow-right"></i>');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    AOS.init();
+
+    // FAQ Accordion Logic
+    const accordionHeaders = document.querySelectorAll('.cyber-accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const body = header.nextElementSibling;
+
+        // Toggle Active Class
+        item.classList.toggle('active');
+
+        // Handle Height Animation
+        if (item.classList.contains('active')) {
+          body.style.maxHeight = body.scrollHeight + "px";
+        } else {
+          body.style.maxHeight = 0;
+        }
+
+        // Close others
+        accordionHeaders.forEach(otherHeader => {
+          if (otherHeader !== header) {
+            otherHeader.parentElement.classList.remove('active');
+            otherHeader.nextElementSibling.style.maxHeight = 0;
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
