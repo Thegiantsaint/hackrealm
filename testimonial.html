@@ -449,12 +449,59 @@
                     employers are searching for.
                   </p>
                   <div class="space32"></div>
-                  <div class="form-area" data-aos="zoom-in" data-aos-duration="1100">
-                    <form>
-                      <input type="text" placeholder="Your Email Address">
-                      <button class="vl-btn1" type="submit">Enroll Now <i class="fa-solid fa-arrow-right"></i></button>
+                  <div class="form-area" data-aos="zoom-in" data-aos-duration="1100"
+                    style="width: 100%; max-width: 500px;">
+                    <form style="display: flex; flex-wrap: wrap; position: relative; width: 100%;">
+
+                      <input type="text" placeholder="Your Email address" style="width: 100%; 
+             padding: 16px 20px; 
+             padding-right: 160px; /* Space for button on desktop */
+             border: 1px solid #e0e0e0; 
+             border-radius: 50px; 
+             outline: none; 
+             font-size: 16px; 
+             box-sizing: border-box;">
+
+                      <button class="vl-btn1" type="submit" style="position: absolute; 
+             right: 5px; 
+             top: 5px; 
+             bottom: 5px; 
+             padding: 0 25px; 
+             border-radius: 50px; 
+             border: none;
+             white-space: nowrap;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             cursor: pointer;">
+                        Get Started <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                      </button>
+
                     </form>
                   </div>
+
+                  <style>
+                    @media (max-width: 576px) {
+                      .form-area form {
+                        display: block !important;
+                        /* Breaks the horizontal flex */
+                      }
+
+                      .form-area input {
+                        padding-right: 20px !important;
+                        /* Reset padding */
+                        margin-bottom: 12px;
+                        text-align: center;
+                      }
+
+                      .form-area .vl-btn1 {
+                        position: static !important;
+                        /* Pulls button out of the input */
+                        width: 100% !important;
+                        height: 55px;
+                      }
+                    }
+                  </style>
                 </div>
 
               </div>
