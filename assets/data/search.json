@@ -13,5 +13,30 @@
     "title": "Courses",
     "url": "/courses.html",
     "content": "A list of the most dangerous cyber threats and prevention methods."
+  },
+  {
+    "title": "Internship",
+    "url": "/internship.html",
+    "content": "A list of the most dangerous cyber threats and prevention methods."
+  },
+  {
+    "title": "DSOC",
+    "url": "/course-dsoc-single.html",
+    "content": "Diploma in Security Operations Center"
+  },
+  {
+    "title": "DPEN",
+    "url": "/course-dpen-single.html",
+    "content": "Diploma in Penetration Testing"
+  },
+  {
+    "title": "DPAM",
+    "url": "/course-dpam-single.html",
+    "content": "Diploma in Privileged Access Management"
+  },
+  {
+    "title": "DCNA",
+    "url": "/course-dcna-single.html",
+    "content": "Diploma in Cyber Network Administration"
   }
 ]

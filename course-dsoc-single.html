@@ -21,6 +21,28 @@
   <link rel="stylesheet" href="assets/css/plugins/swiper-slider.css">
   <link rel="stylesheet" href="assets/css/main.css">
 
+  <style>
+    /* Fix for nice-select dropdown overflow in CTA form */
+    .cta-bg-area .nice-select {
+      width: 100% !important;
+    }
+
+    .cta-bg-area .nice-select .list {
+      max-width: 100%;
+      width: 100% !important;
+      overflow-x: hidden;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    .cta-bg-area .nice-select .option {
+      white-space: normal !important;
+      line-height: 1.4;
+      padding: 10px 12px;
+      min-height: auto;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -464,17 +486,13 @@
 
                       <div class="col-xl-12 col-md-12">
                         <div class="input-area">
-                          <select name="subject" id="subject" class="country-area nice-select">
-                            <option value="" data-display="Select Subject">Select Subject
-                            </option>
-                            <option value="dsoc">Diploma in Security Operations Center
-                              (DSOC)</option>
-                            <option value="dpen">Diploma in Penetration Testing
-                              (DPEN)</option>
-                            <option value="dcna" selected>Diploma in Cyber Network Administration
-                              (DCNA)</option>
-                            <option value="dpam">Diploma in Privileged Access Management
-                              (DPAM)</option>
+                          <select name="subject" id="subject" class="country-area nice-select"
+                            style="width:100%; background-color: white; color: #000; border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
+                            <option value="" data-display="Select Subject">Select Subject</option>
+                            <option value="dsoc" selected>DSOC - Security Operations Center</option>
+                            <option value="dpen">DPEN - Penetration Testing</option>
+                            <option value="dcna">DCNA - Cyber Network Admin</option>
+                            <option value="dpam">DPAM - Privileged Access Mgmt</option>
                           </select>
                         </div>
                       </div>
@@ -520,10 +538,10 @@
               for all skill levels.</p>
             <div class="space24"></div>
             <ul class="social-links">
-              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/hackrealmacademy"><i
+                    class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.instagram.com/hackrealmacademy"><i class="fa-brands fa-instagram"></i></a></li>
+
             </ul>
           </div>
         </div>
@@ -637,18 +655,11 @@
           <h3 class="sidebar-heading">Social Links</h3>
           <ul>
             <li>
-              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
+              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;"
+                href="https://www.instagram.com/hackrealmacademy"><i class="fa-brands fa-instagram"></i></a>
+              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;"
+                href="https://www.linkedin.com/company/hackrealmacademy"><i class="fa-brands fa-linkedin-in"></i></a>
 
-              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#"><i
-                  class="fa-brands fa-instagram"></i></a>
-              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#"><i
-                  class="fa-brands fa-linkedin-in"></i></a>
-              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#"><i
-                  class="fa-brands fa-pinterest-p"></i></a>
-              <a style="background: linear-gradient(135deg, #ED358F, #383293); color: white;" href="#"><i
-                  class="fa-brands fa-youtube"></i></a>
             </li>
           </ul>
         </div>
