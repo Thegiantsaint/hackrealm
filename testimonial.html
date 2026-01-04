@@ -112,7 +112,7 @@
                     <a href="about.html">About Us <span><i
                           class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
                     <ul class="sub-menu">
-                      <li><a href="team.html">Our Team</a></li>
+                      <!-- <li><a href="team.html">Our Team</a></li> -->
                       <li><a href="testimonial.html">Testimonials</a></li>
                       <li><a href="contact.html">Contact Us</a></li>
                       <li><a href="faq.html">FAQ's</a></li>
@@ -736,6 +736,21 @@
   </div>
 
   <!-- modal -->
+
+  <!-- Toast Notification -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+    <div id="toastNotification" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center">
+          <span id="toastIcon" class="me-2" style="font-size: 1.2rem;"></span>
+          <span id="toastBody"></span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
   <!--===== SIDEBAR ENDS STARTS=======-->
 
   <!--===== JS SCRIPT LINK =======-->
@@ -751,12 +766,14 @@
   <script src="assets/js/plugins/slick-slider.js"></script>
   <script src="assets/js/plugins/swiper-slider.js"></script>
   <script src="assets/js/main.js"></script>
+
+
   <script>
     $("#courseForm").submit(function (e) {
       e.preventDefault();
 
-      // Get the submit button
-      const $btn = $(".vl-btn1");
+      // Get the submit button within the modal form
+      const $btn = $("#courseForm .vl-btn1");
 
       // Disable button + show loading text
       $btn.prop("disabled", true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
@@ -766,16 +783,52 @@
         data: $("#courseForm").serialize(),
         method: "POST",
         success: function (response) {
-          alert("Form submitted successfully");
-          window.location.reload();
+          // Close the modal
+          $("#quoteModal").modal('hide');
+
+          // Reset the form
+          $("#courseForm")[0].reset();
+
+          // Re-enable button
+          $btn.prop("disabled", false).html('Send Now <i class="fa-solid fa-arrow-right"></i>');
+
+          // Show success toast
+          showToast("Form submitted successfully! We'll get back to you soon.", "success");
         },
         error: function (err) {
-          alert("Something went wrong. Please try again.");
           // Re-enable button on failure
           $btn.prop("disabled", false).html('Send Now <i class="fa-solid fa-arrow-right"></i>');
+
+          // Show error toast
+          showToast("Something went wrong. Please try again.", "error");
         }
       });
     });
+
+    // Toast notification function
+    function showToast(message, type) {
+      const toastEl = document.getElementById('toastNotification');
+      const toastBody = document.getElementById('toastBody');
+      const toastIcon = document.getElementById('toastIcon');
+
+      // Set message
+      toastBody.textContent = message;
+
+      // Set icon and color based on type
+      if (type === 'success') {
+        toastIcon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        toastEl.classList.remove('bg-danger');
+        toastEl.classList.add('bg-success');
+      } else {
+        toastIcon.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+        toastEl.classList.remove('bg-success');
+        toastEl.classList.add('bg-danger');
+      }
+
+      // Show toast
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
   </script>
 
   <script>
