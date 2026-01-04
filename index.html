@@ -21,6 +21,68 @@
   <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
   <link rel="stylesheet" href="assets/css/plugins/swiper-slider.css">
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* Contact widget responsive styling */
+    .contact-widget-small {
+      padding-bottom: 20px;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+
+    /* Ensure consistent row spacing */
+    .contact-widget-box .row {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    .contact-widget-box .row>[class*="col-"] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    /* Icon styling for better alignment */
+    .contact-widget-small .icons {
+      margin-bottom: 0;
+    }
+
+    /* Title spacing */
+    .contact-widget-small h5 {
+      margin-top: 10px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    /* Email text styling */
+    .contact-widget-small .emailtext {
+      font-size: 13px !important;
+      word-break: break-word;
+      line-height: 1.5;
+    }
+
+    /* Make responsive for mobile */
+    @media (max-width: 768px) {
+      .contact-widget-small .emailtext {
+        font-size: 16px !important;
+      }
+
+      .contact-widget-small {
+        min-height: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        align-items: center;
+      }
+
+      .contact-widget-box .row>[class*="col-"] {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -338,23 +400,18 @@
                 <div class="contact-widget-small">
                   <div class="icons">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                      <path d="M13.9985 24.5857C18.0699 18.8857 21.3271 14 21.3271 10.7429C21.3271 8.79922
-                      20.5549 6.93517 19.1806 5.5608C17.8062 4.18642 15.9422 3.41431 13.9985 3.41431C12.0548
-                      3.41431 10.1908 4.18642 8.81641 5.5608C7.44204 6.93517 6.66992 8.79922 6.66992 10.7429C6.66992
-                      14 9.92706 18.8857 13.9985 24.5857Z" stroke="white" stroke-width="2" />
-                      <path d="M17.2565 10.7429C17.2565 11.6067 16.9133 12.4352 16.3025 13.046C15.6916 13.6568 14.8632
-                      14 13.9993 14C13.1355 14 12.307 13.6568 11.6962 13.046C11.0853 12.4352 10.7422 11.6067
-                      10.7422 10.7429C10.7422 9.87901 11.0853 9.05055 11.6962 8.43971C12.307 7.82888 13.1355
-                      7.48572 13.9993 7.48572C14.8632 7.48572 15.6916 7.82888 16.3025 8.43971C16.9133 9.05055
-                      17.2565 9.87901 17.2565 10.7429Z" stroke="white" stroke-width="2" />
+                      <path
+                        d="M4.5 7.5H23.5C24.6046 7.5 25.5 8.39543 25.5 9.5V19.5C25.5 20.6046 24.6046 21.5 23.5 21.5H4.5C3.39543 21.5 2.5 20.6046 2.5 19.5V9.5C2.5 8.39543 3.39543 7.5 4.5 7.5Z"
+                        stroke="white" stroke-width="2" stroke-linejoin="round" />
+                      <path d="M2.5 9.5L12.7273 15.6364C13.5117 16.107 14.4883 16.107 15.2727 15.6364L25.5 9.5"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </div>
 
                   <div class="space24"></div>
                   <h5>Email Address</h5>
                   <div class="space12"></div>
-                  <a class="emailtext" href="mailto:admissions@hackrealmacademy.com"
-                    style="display:inline-block; white-space:normal; word-break:break-all; line-height:1.4; font-size:16px;">
+                  <a class="emailtext" href="mailto:admissions@hackrealmacademy.com">
                     admissions@hackrealmacademy.com
                   </a>
 
@@ -366,15 +423,11 @@
                 <div class="contact-widget-small">
                   <div class="icons">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                      <path d="M13.9985 24.5857C18.0699 18.8857 21.3271 14 21.3271 10.7429C21.3271 8.79922
-                      20.5549 6.93517 19.1806 5.5608C17.8062 4.18642 15.9422 3.41431 13.9985 3.41431C12.0548
-                      3.41431 10.1908 4.18642 8.81641 5.5608C7.44204 6.93517 6.66992 8.79922 6.66992 10.7429C6.66992
-                      14 9.92706 18.8857 13.9985 24.5857Z" stroke="white" stroke-width="2" />
-                      <path d="M17.2565 10.7429C17.2565 11.6067 16.9133 12.4352 16.3025 13.046C15.6916 13.6568 14.8632
-                      14 13.9993 14C13.1355 14 12.307 13.6568 11.6962 13.046C11.0853 12.4352 10.7422 11.6067
-                      10.7422 10.7429C10.7422 9.87901 11.0853 9.05055 11.6962 8.43971C12.307 7.82888 13.1355
-                      7.48572 13.9993 7.48572C14.8632 7.48572 15.6916 7.82888 16.3025 8.43971C16.9133 9.05055
-                      17.2565 9.87901 17.2565 10.7429Z" stroke="white" stroke-width="2" />
+                      <path
+                        d="M8.25 4.5C7.2835 4.5 6.5 5.2835 6.5 6.25V21.75C6.5 22.7165 7.2835 23.5 8.25 23.5H19.75C20.7165 23.5 21.5 22.7165 21.5 21.75V6.25C21.5 5.2835 20.7165 4.5 19.75 4.5H8.25Z"
+                        stroke="white" stroke-width="2" stroke-linejoin="round" />
+                      <path d="M11.5 7.5H16.5" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      <circle cx="14" cy="20" r="1" stroke="white" stroke-width="2" />
                     </svg>
                   </div>
 
